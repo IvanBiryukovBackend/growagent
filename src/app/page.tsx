@@ -1,4 +1,8 @@
+import { WaitlistForm } from "@/components/waitlist-form";
+
 export default function Home() {
+  const DEMO_URL = "https://calendly.com/your-handle/20min";
+
   const features = [
     {
       title: "SEO Agent",
@@ -62,16 +66,18 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#pricing"
+              href="#waitlist"
               className="rounded-xl bg-emerald-400 px-6 py-3 text-center font-medium text-slate-950 transition hover:bg-emerald-300"
             >
-              Start at $99/month
+              Join waitlist
             </a>
             <a
-              href="#how-it-works"
+              href={DEMO_URL}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-xl border border-slate-700 px-6 py-3 text-center font-medium transition hover:border-slate-500"
             >
-              See how it works
+              Book demo
             </a>
           </div>
           <div className="mt-8 rounded-2xl border border-slate-800 bg-slate-950 p-4">
@@ -81,6 +87,18 @@ export default function Home() {
               days with $30k budget&quot;
             </p>
           </div>
+        </section>
+
+        <section
+          id="waitlist"
+          className="rounded-3xl border border-emerald-400/30 bg-emerald-400/5 p-8 md:p-12"
+        >
+          <h2 className="text-3xl font-semibold">Get early access</h2>
+          <p className="mt-3 max-w-3xl text-slate-300">
+            Tell us your website and growth goal. We will invite selected teams
+            to a private onboarding and strategy setup.
+          </p>
+          <WaitlistForm />
         </section>
 
         <section id="how-it-works">
@@ -188,12 +206,10 @@ export default function Home() {
             Launch your first autonomous growth workflow in minutes.
           </p>
           <a
-            href="https://app.lemonsqueezy.com"
-            target="_blank"
-            rel="noreferrer"
+            href="#waitlist"
             className="mt-6 inline-block rounded-xl bg-emerald-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-emerald-300"
           >
-            Create your plan
+            Join waitlist
           </a>
         </section>
       </main>
